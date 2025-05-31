@@ -1,0 +1,11 @@
+modules = ["python-3.12", "web", "lua-5.2", "bash", "nodejs-20"]
+compile = "make"
+run = "automake"
+
+[nix]
+channel = "stable-24_05"
+packages = ["python312Packages.tox"]
+
+[deployment]
+build = ["sh", "-c", "make"]
+run = ["sh", "-c", "automake"]
