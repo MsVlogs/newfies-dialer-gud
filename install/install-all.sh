@@ -34,7 +34,7 @@ if [ -z "${INSTALL_FS}" ]; then
 fi
 
 
-SCRIPT_NOTICE="This script is only intended to run on Debian 64bits 7.X or 8.X"
+SCRIPT_NOTICE="This script is only intended to run on Debian 64bits 12 or 12.X"
 
 ARCH=$(uname -m)
 if [ $ARCH != "x86_64" ]; then
@@ -47,7 +47,7 @@ func_identify_os() {
     if [ -f /etc/debian_version ] ; then
         DIST='DEBIAN'
         apt-get -y install lsb-release
-        if [ "$(lsb_release -cs)" != "wheezy" ] && [ "$(lsb_release -cs)" != "jessie" ]; then
+        if [ "$(lsb_release -cs)" != "bookworm" ] && [ "$(lsb_release -cs)" != "bookworm" ]; then
             echo $SCRIPT_NOTICE
             exit 255
         fi

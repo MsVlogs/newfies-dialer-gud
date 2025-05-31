@@ -49,13 +49,13 @@ HTTP_PORT='8008'
 
 #Django bug https://code.djangoproject.com/ticket/16017
 export LANG="en_US.UTF-8"
-SCRIPT_NOTICE="This install script is only intended to run on Debian 7.X or 8.X"
+SCRIPT_NOTICE="This install script is only intended to run on Debian 12 or 12.X"
 
 # Identify Linux Distribution type
 func_identify_os() {
     if [ -f /etc/debian_version ] ; then
         DIST='DEBIAN'
-        if [ "$(lsb_release -cs)" != "wheezy" ] && [ "$(lsb_release -cs)" != "jessie" ]; then
+        if [ "$(lsb_release -cs)" != "bookworm" ] && [ "$(lsb_release -cs)" != "bookworm" ]; then
             echo $SCRIPT_NOTICE
             exit 255
         fi
