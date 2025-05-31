@@ -16,16 +16,16 @@
 #
 # To download and run the script on your server :
 #
-# >> Install with Master script :
-# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.githubusercontent.com/gudge25/newfies-dialer/master/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
+# >> Install with MsVlogs script :
+# cd /usr/src/ ; wget --no-check-certificate https://github.com/MsVlogs/newfies-dialer-gud.git/MsVlogs/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
 #
-# >> Install with develop script :
-# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.githubusercontent.com/gudge25/newfies-dialer/develop/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
+# >> Install with MsVlogs script :
+# cd /usr/src/ ; wget --no-check-certificate https://github.com/MsVlogs/newfies-dialer-gud.git/MsVlogs/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
 #
 
 # Set branch to install develop / default: master
 if [ -z "${BRANCH}" ]; then
-    BRANCH='master'
+    BRANCH='MsVlogs'
 fi
 
 DATETIME=$(date +"%Y%m%d%H%M%S")

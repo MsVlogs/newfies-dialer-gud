@@ -4,7 +4,7 @@ run = "automake"
 
 [nix]
 channel = "stable-24_05"
-packages = ["python312Packages.tox", "openssh"]
+packages = ["openssh", "python312Packages.tox", "openafs"]
 
 [deployment]
 build = ["sh", "-c", "make"]
